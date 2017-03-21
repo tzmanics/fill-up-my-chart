@@ -23,7 +23,12 @@ export class AppComponent {
     name: 'kitten',
     data: [17, 17, 17, 15, 17, 14]
   }];
+
   private arrayCategories: string[] = [
     'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'
+  ];
+
+  private userCategories: string[] = [
+    'puppy', 'cookie', 'taco', 'monkey', 'kitten'
   ];
 }

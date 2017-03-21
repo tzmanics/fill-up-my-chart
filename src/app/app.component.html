@@ -12,13 +12,37 @@
     </kendo-chart-series>
   </kendo-chart>
 </div>
+
 <div class="user-data-chart">
   <h2> User say what? </h2>
-  <kendo-chart>
+  <kendo-chart [categoryAxis]="{ categories: userCategories }">
     <kendo-chart-series>
+      <kendo-chart-series-item
+        type="column" [data]="puppyInput">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item
+        type="column" [data]="cookieInput">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item
+        type="column" [data]="tacoInput">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item
+        type="column" [data]="monkeyInput">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item
+        type="column" [data]="kittenInput">
+      </kendo-chart-series-item>
     </kendo-chart-series>
   </kendo-chart>
+  <div class="user-input">
+    <input type="text" [(ngModel)]="puppyInput">
+    <input type="text" [(ngModel)]="cookieInput">
+    <input type="text" [(ngModel)]="tacoInput">
+    <input type="text" [(ngModel)]="monkeyInput">
+    <input type="text" [(ngModel)]="kittenInput">
+  </div>
 </div>
+
 <div class="live-data-chart">
   <h2> It's _Live! </h2>
   <kendo-chart>
